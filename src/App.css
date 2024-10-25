@@ -1,38 +1,226 @@
-.App {
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  overflow: auto;
+}
+
+.info-paragraph {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0 10%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.birthday-page {
+  text-align: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #d9c8da 0%, #e9abed 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main image container */
+.main-image-container {
+  margin-top: 10px;
 }
 
-@keyframes App-logo-spin {
+/* Main image styling */
+.main-image {
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Birthday message styling */
+.birthday-message {
+  font-size: 1.5rem;
+  color: #ff6347;
+  margin-top: 20px;
+}
+
+/* Carousel container */
+.image-carousel {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Carousel image styling */
+.image-carousel img {
+  border-radius: 10px;
+  height: auto;
+  max-height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Play music prompt */
+.play-music-prompt {
+  position: fixed;
+  bottom: 12%;
+  color: rgb(47, 21, 21);
+  font-size: 18px;
+  z-index: 2;
+}
+
+/* Heart container adjustments */
+.heart-container {
+  position: absolute; /* Change to absolute */
+  top: 0; /* Start from the top of the hero section */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px); /* Change this value to match your hero section height */
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  background-color: #740707;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Heart shapes */
+.heart:before,
+.heart:after {
+  content: '';
+  background-color: #740707;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  width: 15px;
+  height: 15px;
+  top: -7.5px;
+  left: 0;
+}
+
+.heart:after {
+  width: 15px;
+  height: 15px;
+  left: 7.5px;
+  top: 0;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg) scale(1);
+  }
+}
+
+/* Heart positions - adjusted */
+.heart-container .heart {
+  animation-duration: 10s;
+}
+
+.heart-0 { left: 10vw; top: 20vh; animation-delay: 0s; }
+.heart-1 { left: 30vw; top: 50vh; animation-delay: 1s; }
+.heart-2 { left: 40vw; top: 30vh; animation-delay: 2s; }
+.heart-3 { left: 70vw; top: 60vh; animation-delay: 1.5s; }
+.heart-4 { left: 90vw; top: 20vh; animation-delay: 3s; }
+.heart-5 { left: 15vw; top: 80vh; animation-delay: 2.5s; }
+.heart-6 { left: 35vw; top: 10vh; animation-delay: 3.5s; }
+.heart-7 { left: 55vw; top: 70vh; animation-delay: 4s; }
+.heart-8 { left: 75vw; top: 40vh; animation-delay: 1s; }
+.heart-9 { left: 25vw; top: 60vh; animation-delay: 2s; }
+
+/* Updated section styles */
+.section {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 10%;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  transition: all 0.5s ease-in-out;
+}
+
+.section-image {
+  flex: 0 0 200px;
+  width: 600px;
+  height: 250px;
+  border-radius: 25px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.section-image:hover {
+  transform: scale(1.05);
+}
+
+.section-paragraph {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+  animation-delay: 0.3s;
+}
+
+/* Reverse layout for alternate sections */
+.section-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section,
+  .section-reverse {
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .section-image {
+    margin: 0 auto 20px;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .section-paragraph {
+    padding: 0 20px;
   }
 }
