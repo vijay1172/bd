@@ -23,12 +23,13 @@ const App = () => {
           volume={0.4}
         />
       )}
+      
       <div className="main-image-container">
         <Slide direction="down" triggerOnce>
           <img src="/images/main.jpg" alt="Main" className="main-image" />
         </Slide>
       </div>
-
+      
       <div className="birthday-message">
         <Slide direction="up" triggerOnce>
           <p>Happy Birthday, Love! 🎉💖 You mean the world to me!</p>
@@ -107,7 +108,7 @@ const App = () => {
         <div className="play-music-prompt">Click anywhere to start the celebration 🎉</div>
       )}
 
-      {/* Updated alternating sections with animations */}
+      
       <Slide direction="left" triggerOnce>
         <div className="section">
           <img src="/images/three.jpg" alt="Description 1" className="section-image" />
@@ -125,6 +126,19 @@ const App = () => {
           </div>
         </div>
       </Slide>
+      {/* Long paragraph with slide-up effect */}
+      <div className="long-message-container">
+        <Slide direction="up" triggerOnce>
+          <div className="long-message">
+            <p>
+              My love, I cannot express how much joy you've brought into my life. From the smallest moments to the biggest milestones, you've been my rock, my inspiration, and my reason to smile. Every laugh we've shared, every tear, and every adventure has brought us closer, and I wouldn't trade any of it for the world. Here's to many more years of love, laughter, and countless memories. You are my everything, and I will always cherish you. Happy Birthday once again, my love. 💖
+            </p>
+          </div>
+        </Slide>
+      </div>
+
+      
+      
     </div>
   );
 };

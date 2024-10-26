@@ -224,3 +224,17 @@ body {
     padding: 0 20px;
   }
 }
+
+.long-message-container {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.long-message p {
+  font-size: 18px;
+  line-height: 2.5;
+  text-align: center;
+  color: #333;
+}
+
+
