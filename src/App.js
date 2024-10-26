@@ -32,7 +32,7 @@ const App = () => {
       
       <div className="birthday-message">
         <Slide direction="up" triggerOnce>
-          <p>Happy Birthday, Love! 🎉💖 You mean the world to me!</p>
+          <p>Happy Birthday, Swati 🎉💖 You mean the world to me!</p>
         </Slide>
       </div>
       
@@ -111,18 +111,18 @@ const App = () => {
       
       <Slide direction="left" triggerOnce>
         <div className="section">
-          <img src="/images/three.jpg" alt="Description 1" className="section-image" />
+          <img src="/images/gudda.jpg" alt="Description 1" className="section-image" />
           <div className="section-paragraph">
-            <p>This is a special moment we shared together. It reminds me of how much fun we had!</p>
+            <p>Ye jo smile haina vo hamesha aise hi rehni chaiye gudda on your face so smile a bit now </p>
           </div>
         </div>
       </Slide>
 
       <Slide direction="right" triggerOnce>
         <div className="section section-reverse">
-          <img src="/images/six.jpg" alt="Description 2" className="section-image" />
+          <img src="/images/three.jpg" alt="Description 2" className="section-image" />
           <div className="section-paragraph">
-            <p>Another beautiful memory! I cherish every second we spend together.</p>
+            <p>Another beautiful memory! I cherish every second we spend together.Thanks for being with me in this journey of beautiful memories</p>
           </div>
         </div>
       </Slide>
@@ -131,7 +131,7 @@ const App = () => {
         <Slide direction="up" triggerOnce>
           <div className="long-message">
             <p>
-              My love, I cannot express how much joy you've brought into my life. From the smallest moments to the biggest milestones, you've been my rock, my inspiration, and my reason to smile. Every laugh we've shared, every tear, and every adventure has brought us closer, and I wouldn't trade any of it for the world. Here's to many more years of love, laughter, and countless memories. You are my everything, and I will always cherish you. Happy Birthday once again, my love. 💖
+              My love, I cannot express how much joy you've brought into my life. From the smallest moments to the biggest milestones, you've been my rock, my inspiration, and my reason to smile. Every laugh we've shared, every tear, and every fight has brought us closer, and I wouldn't trade any of it for the world. Here's to many more years of love, laughter, and countless memories. You are my everything, and I will always cherish you. Happy Birthday once again, my love. 💖
             </p>
           </div>
         </Slide>

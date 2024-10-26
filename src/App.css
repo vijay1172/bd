@@ -16,7 +16,7 @@ body {
 .birthday-page {
   text-align: center;
   padding: 10px;
-  background: linear-gradient(135deg, #d9c8da 0%, #e9abed 100%);
+  background: linear-gradient(135deg, #8561aa 0%, #c2bbc2 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,7 +39,8 @@ body {
 /* Birthday message styling */
 .birthday-message {
   font-size: 1.5rem;
-  color: #ff6347;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ae0e0e;
   margin-top: 20px;
 }
 
@@ -157,13 +158,14 @@ body {
 
 .section-image {
   flex: 0 0 200px;
-  width: 600px;
-  height: 250px;
+  width: 800px;
+  height: 300px;
   border-radius: 25px;
   object-fit: cover;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(3, 9, 39, 0.2);
   transition: transform 0.3s ease-in-out;
 }
+
 
 .section-image:hover {
   transform: scale(1.05);
